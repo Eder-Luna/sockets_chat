@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaeaea;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #0A262A;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    #mensajes {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      background: #DBD7C5;
+    }
+    .mensaje {
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.4rem;
+    }
+    .usuario {
+      font-weight: bold;
+      color: #244848;
+    }
+    form {
+      display: flex;
+      background: #fff;
+      padding: 0.5rem;
+      border-top: 1px solid #ccc;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #4C706B;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header><h2>Chat del caracol</h2></header>
+
+  <div id="mensajes"></div>
+
+  <form id="formEnviar">
+    <input type="text" id="inputMensaje" placeholder="Escribe un mensaje..." autocomplete="off" />
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Cargar socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

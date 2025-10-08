@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ingreso al Chat</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #0A262A;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+    form {
+      background: #4C706B;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      text-align: center;
+    }
+    input {
+      padding: 0.5rem;
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #DBD7C5;
+    }
+    button {
+      margin-top: 15px;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #7A9C92;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form action="/establecer-usuario" method="POST">
+    <h2>Bienvenido al Chat</h2>
+    <p>Ingresa tu nombre de usuario:</p>
+    <input type="text" name="usuario" required />
+    <button type="submit">Entrar</button>
+  </form>
+</body>
+</html>
